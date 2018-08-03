@@ -38,9 +38,6 @@ public class MainActivity extends AppCompatActivity {
                 Gson gson = gsonBuilder.create();
                 User[] users = gson.fromJson(response, User[].class);
                 userlist.setAdapter(new GithubAdapter(MainActivity.this, users));
-
-                //Type collectionType = new TypeToken<Collection<Member>>(){}.getType();
-               // Collection<Member> enums = gson.fromJson(response, collectionType);
             }
         }, new Response.ErrorListener() {
             @Override
@@ -51,5 +48,11 @@ public class MainActivity extends AppCompatActivity {
 
         RequestQueue queue = Volley.newRequestQueue(this);
         queue.add(request);
+    }
+
+    public void add()
+    {
+        int i = 1+2;
+
     }
 }
